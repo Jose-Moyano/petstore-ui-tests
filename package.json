@@ -1,0 +1,23 @@
+{
+  "name": "petstore-ui-tests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:html": "cucumber-js --format html:report.html",
+    "test:ci": "npx playwright install && cucumber-js --tags 'not @ignore'",
+    "test:smoke": "cucumber-js --tags '@smoke and not @ignore'",
+    "test:debug": "PWDEBUG=1 cucumber-js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.3.0",
+    "@playwright/test": "^1.52.0",
+    "playwright": "^1.52.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
